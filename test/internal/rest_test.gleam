@@ -2,10 +2,10 @@ import gleeunit
 import gleeunit/should
 
 pub fn main() {
-	gleeunit.main()
+  gleeunit.main()
 }
 
 pub fn toriaezu_test() {
-	1
-	|> should.equal(1)
+  1
+  |> should.equal(1)
 }
