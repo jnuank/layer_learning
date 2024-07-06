@@ -1,4 +1,4 @@
-import domain
+import internal/domain
 import gleam/function
 import gleam/io
 import gleeunit
@@ -17,7 +17,7 @@ pub fn range_default_test() {
 
 pub fn range_new_test() {
   mockth.unload_all()
-  let assert Ok(_) = mockth.expect("domain", "range", fn() { "hello" })
+  let assert Ok(_) = mockth.expect("internal@domain", "range", fn() { "aello" })
 
   io.debug(mockth.mocked())
 
