@@ -1,6 +1,6 @@
 import gleeunit
 import gleeunit/should
-import internal/usecase
+import usecase
 import mockth
 
 pub fn main() {
