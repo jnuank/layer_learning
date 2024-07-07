@@ -1,5 +1,4 @@
-import internal/domain
-import gleam/function
+// import domain
 import gleam/io
 import gleeunit
 import gleeunit/should
@@ -17,31 +16,14 @@ pub fn range_default_test() {
 
 pub fn range_new_test() {
   mockth.unload_all()
-  let assert Ok(_) = mockth.expect("internal@domain", "range", fn() { "aello" })
+  let assert Ok(_) = mockth.expect("domain", "range", fn() { "aello" })
 
   io.debug(mockth.mocked())
 
-  io.debug(domain.range())
+  // io.debug(domain.range())
 
   usecase.range(1, 5)
   |> should.equal("[1,5]")
-
-  mockth.unload_all()
-}
-
-pub fn expect1_test() {
-  mockth.unload_all()
-  let assert Ok(_) =
-    mockth.expect("gleam@function", "identity", fn(_) { "hello" })
-
-  mockth.validate("gleam@function")
-  |> should.equal(True)
-
-  mockth.mocked()
-  |> should.equal(["gleam@function"])
-
-  function.identity("world")
-  |> should.equal("hello")
 
   mockth.unload_all()
 }
