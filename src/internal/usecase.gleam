@@ -1,5 +1,6 @@
-import gleam/int
+import domain
 
 pub fn range(lower: Int, upper: Int) -> String {
-  "[" <> int.to_string(lower) <> "," <> int.to_string(upper) <> "]"
+  domain.range(lower, upper)
+  // "[" <> int.to_string(lower) <> "," <> int.to_string(upper) <> "]"
 }
