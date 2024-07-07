@@ -1,21 +1,16 @@
 import gleeunit
 import gleeunit/should
-import gleam/json
-import gleam/io
+import rest
+import mockth
 
 pub fn main() {
   gleeunit.main()
 }
 
-pub fn toriaezu_test() {
-  1
-  |> should.equal(1)
-}
-
-
 pub fn json_test() {
-  json.object([
-    #("name", json.string("aiueo"))
-  ])
-  |> io.debug
+ mockth.unload_all()
+ let assert Ok(_) = mockth.expect("use_case", "range", fn(_, _) { "[3,8]" })
+
+ rest.to_json()
+ |> should.equal("{\"name\":\"aiueo\"}")
 }
