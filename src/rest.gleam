@@ -1,5 +1,5 @@
-import use_case
+import usecase
 
 pub fn to_json() -> String {
-	use_case.range(3, 8)
+	usecase.range(3, 8)
 }

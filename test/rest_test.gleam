@@ -9,7 +9,7 @@ pub fn main() {
 
 pub fn json_test() {
  mockth.unload_all()
- let assert Ok(_) = mockth.expect("use_case", "range", fn(_, _) { "[3,8]" })
+ let assert Ok(_) = mockth.expect("usecase", "range", fn(_, _) { "[3,8]" })
 
  rest.to_json()
  |> should.equal("{\"name\":\"aiueo\"}")
