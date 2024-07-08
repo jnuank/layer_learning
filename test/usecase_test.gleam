@@ -1,7 +1,7 @@
 import gleeunit
 import gleeunit/should
-import usecase
 import mockth
+import usecase
 
 pub fn main() {
   gleeunit.main()
